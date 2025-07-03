@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You Mina</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: repeating-linear-gradient(45deg, #ffb6c1, #ffb6c1 10px, #ffc0cb 10px, #ffc0cb 20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+    }h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: red;
+  transform: rotate(-45deg);
+  animation: float 10s infinite ease-in;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  top: 0;
+  left: 10px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(-45deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <h1>I Love You Mina</h1>  <audio autoplay loop>
+    <source src="https://dl.sndup.net/b5pf/K.%20-%20Cigarettes%20After%20Sex.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 200);
+  </script></body>
+</html>
