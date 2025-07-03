@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You Mina</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/3PZcM6i.png') repeat;
+      background-size: contain;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: hotpink;
+      text-shadow: 2px 2px 5px white;
+      flex-direction: column;
+      animation: fadein 3s;
+    }@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+audio {
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>I love you Mina</h1>
+  <audio autoplay loop controls>
+    <source src="https://file-examples.com/storage/fe8291e5d1f848347d4cb97/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
